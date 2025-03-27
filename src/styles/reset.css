@@ -1,0 +1,94 @@
+/* Reset CSS */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Supprimer toutes les marges et rembourrages par défaut */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  /* Corriger le style d'affichage des éléments HTML5 pour les anciens navigateurs */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  
+  /* Normaliser le comportement de line-height */
+  body {
+    line-height: 1;
+  }
+  
+  /* Supprimer les puces de liste */
+  ol, ul {
+    list-style: none;
+  }
+  
+  /* Normaliser les citations */
+  blockquote, q {
+    quotes: none;
+  }
+  
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  
+  /* Normaliser les tableaux */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Améliorer le rendu du texte et le zoom dans tous les navigateurs */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Supprimer les bordures sur les images à l'intérieur des liens */
+  a img {
+    border: none;
+  }
+  
+  /* Améliorer la cohérence des formulaires */
+  button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+  }
+  
+  /* Rendre la police cohérente dans tous les navigateurs */
+  button, input, select, textarea {
+    font-family: inherit;
+  }
+  
+  /* Supprimer les styles par défaut sur les boutons */
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  /* Uniformiser le style de focus */
+  :focus {
+    outline: 0;
+  }

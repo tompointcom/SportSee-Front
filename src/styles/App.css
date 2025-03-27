@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  margin-left: 117px; 
+  flex: 1;
+  padding: 20px;
+}
