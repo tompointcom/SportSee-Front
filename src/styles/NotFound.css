@@ -1,0 +1,30 @@
+.not-found-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: calc(100vh - 90px);
+  }
+  
+  .not-found-content h1 {
+    font-size: 10rem;
+    color: #FF0101;
+    margin-bottom: 0;
+  }
+  
+  .not-found-content h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+  
+  .back-link {
+    color: #FF0101;
+    font-size: 1.2rem;
+    text-decoration: underline;
+  }
+  
+  .back-link:hover {
+    text-decoration: none;
+  }

@@ -1,0 +1,35 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-container {
+    display: flex;
+    flex: 1;
+  }
+  
+  .content {
+    margin-left: 217px; 
+    margin-top: 50px;
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .content h1 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  
+  .user-name {
+    color: red;
+  }
+  
+  .p {
+    font-size: 18px;
+  }
+
+  .home-container {
+    padding: 20px;
+  }
