@@ -29,7 +29,7 @@ useEffect(() => {
       if (data) {
         const formattedData = {
           userInfos: {
-            firstName: data.firstName
+            firstName: data.userInfos.firstName
           }
         };
         console.log("Setting userData:", formattedData);

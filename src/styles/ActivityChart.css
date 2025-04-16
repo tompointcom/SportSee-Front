@@ -1,0 +1,44 @@
+.activity-chart-container {
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    padding: 24px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+    margin-bottom: 50px;
+    height: 320px;
+  }
+  
+  .activity-chart-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .activity-chart-header h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #20253A;
+    margin: 0;
+  }
+  
+  .custom-tooltip {
+    background-color: #E60000;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  
+  .custom-tooltip p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .legend-text {
+    color: #74798C;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  .recharts-bar-rectangle:hover {
+    opacity: 0.8;
+  }

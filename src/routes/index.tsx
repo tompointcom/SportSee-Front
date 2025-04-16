@@ -4,9 +4,11 @@ import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import Layout from '../components/Layout';
 import ApiService from '../services/api';
+import '../styles/Sidebar.css';
+import '../styles/Layout.css';
 
 const AppRoutes = () => {
-    const [userData, setUserData] = useState<{ userInfos: { firstName: string; }; } | null>(null);
+    const [userData, setUserData] = useState<{ userInfos: { firstName: string; }; keyData?: any; } | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -19,8 +21,9 @@ const AppRoutes = () => {
                 if (data) {
                     setUserData({
                         userInfos: {
-                            firstName: data.firstName
-                        }
+                            firstName: data.userInfos.firstName
+                        },
+                        keyData: data.keyData  
                     });
                 } else {
                     throw new Error("Données utilisateur non disponibles");
@@ -32,26 +35,36 @@ const AppRoutes = () => {
                 setIsLoading(false);
             }
         };
-
+    
         fetchUserData();
     }, []);
 
     return (
         <Router>
-            <Routes>
-                <Route path="/" element={
-                    <Layout>
-                        <Home userData={userData} isLoading={isLoading} error={error} />
-                    </Layout>
-                } />
-                <Route path="*" element={
-                    <Layout>
-                        <NotFound />
-                    </Layout>
-                } />
-            </Routes>
+          <Routes>
+            {/* Route par défaut - redirige vers l'utilisateur 12 */}
+            <Route path="/" element={
+              <Layout>
+                <Home userId={12} userData={userData} isLoading={isLoading} error={error} />
+              </Layout>
+            } />
+            
+            {/* Route avec paramètre d'ID utilisateur */}
+            <Route path="/user/:userId" element={
+              <Layout>
+                <Home userData={userData} isLoading={isLoading} error={error} />
+              </Layout>
+            } />
+            
+            {/* Route 404 */}
+            <Route path="*" element={
+              <Layout>
+                <NotFound />
+              </Layout>
+            } />
+          </Routes>
         </Router>
-    );
+      );
 };
 
 export default AppRoutes;

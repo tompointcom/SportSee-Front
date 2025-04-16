@@ -10,10 +10,9 @@
   }
   
   .content {
-    margin-left: 217px; 
-    margin-top: 50px;
+    margin-top: -30px;
+    padding: 15px 50px 30px 50px;
     flex: 1;
-    padding: 20px;
   }
   
   .content h1 {
@@ -32,4 +31,54 @@
 
   .home-container {
     padding: 20px;
+  }
+
+  .home-page {
+    width: 100%;
+  }
+  
+  .welcome-section {
+    margin-bottom: 40px;
+  }
+  
+  .user-name {
+    color: #FF0101;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .charts-container {
+    flex: 3;
+  }
+  
+  .nutrition-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 1024px) {
+    .dashboard-container {
+      flex-direction: column;
+    }
+    
+    .nutrition-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+
+  .charts-row {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .charts-row > div {
+    flex: 1;
+    max-width: 258px;
   }

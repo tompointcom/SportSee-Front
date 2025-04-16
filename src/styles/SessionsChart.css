@@ -1,0 +1,33 @@
+.sessions-chart-container {
+    background-color: #FF0000;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    height: 263px;
+    overflow: hidden;
+  }
+  
+  .sessions-chart-title {
+    position: absolute;
+    top: 29px;
+    left: 34px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    width: 147px;
+    margin: 0;
+    z-index: 10;
+  }
+  
+  .sessions-tooltip {
+    background-color: white;
+    padding: 7px 10px;
+    font-size: 10px;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .sessions-tooltip p {
+    margin: 0;
+  }
