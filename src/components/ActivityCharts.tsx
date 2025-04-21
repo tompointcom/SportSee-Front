@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Composant affichant un graphique à barres de l'activité quotidienne.
+ * Ce graphique montre le poids et les calories brûlées pour chaque journée.
+ */
+
 import React from 'react';
 import {
   BarChart,
@@ -11,29 +16,72 @@ import {
 } from 'recharts';
 import '../styles/ActivityChart.css';
 
-
+/**
+ * Interface représentant les données d'activité quotidienne
+ * @typedef {Object} ActivityData
+ * @property {number} day - Le numéro du jour
+ * @property {number} kilogram - Le poids en kilogrammes
+ * @property {number} calories - Les calories brûlées
+ */
 interface ActivityData {
   day: number;
   kilogram: number;
   calories: number;
 }
 
+/**
+ * Props du composant ActivityChart
+ * @typedef {Object} ActivityChartProps
+ * @property {ActivityData[]} data - Tableau des données d'activité à afficher
+ */
 interface ActivityChartProps {
   data: ActivityData[];
 }
 
+/**
+ * Composant affichant un graphique à barres de l'activité quotidienne
+ * 
+ * @component
+ * @param {ActivityChartProps} props - Les propriétés du composant
+ * @returns {JSX.Element} Graphique à barres montrant le poids et les calories
+ */
 const ActivityChart: React.FC<ActivityChartProps> = ({ data }) => {
-
+  
+  /**
+   * Copie des données d'entrée pour éviter toute mutation
+   * @type {ActivityData[]}
+   */
   const chartData = [...data];
   
-
+  /**
+   * Calcule la valeur minimale pour l'axe de poids (1kg en dessous du minimum)
+   * @type {number}
+   */
   const minWeight = Math.min(...chartData.map(item => item.kilogram)) - 1;
+
+  /**
+   * Calcule la valeur maximale pour l'axe de poids (1kg au-dessus du maximum)
+   * @type {number}
+   */
   const maxWeight = Math.max(...chartData.map(item => item.kilogram)) + 1;
 
-
+  /**
+   * Formatter pour convertir les valeurs de l'axe X en chaînes
+   * 
+   * @param {number} value - Valeur numérique du jour
+   * @returns {string} Représentation en chaîne du jour
+   */
   const xAxisFormatter = (value: number) => value.toString();
 
-
+  /**
+   * Composant d'infobulle personnalisé qui affiche le poids et les calories
+   * 
+   * @component
+   * @param {Object} props - Props de l'infobulle
+   * @param {boolean} props.active - Si l'infobulle est active
+   * @param {Array} props.payload - Données à afficher dans l'infobulle
+   * @returns {JSX.Element|null} Infobulle avec poids et calories ou null si inactive
+   */
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (

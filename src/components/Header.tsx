@@ -1,6 +1,18 @@
+/**
+ * @fileoverview Composant d'en-tête de l'application.
+ * Affiche le logo de l'application et le menu de navigation principal.
+ */
+
 import React from "react";
 import "../styles/Header.css";
 import logo from '../assets/logo/logo.png';
+
+/**
+ * Composant Header affichant la barre de navigation principale
+ * 
+ * @component
+ * @returns {JSX.Element} En-tête de l'application avec logo et liens de navigation
+ */
 
 const Header: React.FC = () => {
     return (
