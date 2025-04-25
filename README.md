@@ -48,7 +48,8 @@ To get started with the project, follow these steps:
    npm run dev
    ```
 
-5. Open your browser and visit `http://localhost:3000` to see the application in action.
+5. Open your browser and visit `http://localhost:3001` to see the application in action.
+   Do not use port 3000 because it is used by the API.
 
 ## Build
 
