@@ -99,10 +99,10 @@ const ActivityChart: React.FC<ActivityChartProps> = ({ data }) => {
       <div className="activity-chart-header">
         <h3>Activité quotidienne</h3>
       </div>
-      <ResponsiveContainer width={883} height={320}>
+      <ResponsiveContainer width="100%" height={280}>
         <BarChart
           data={chartData}
-          margin={{ top: 10, right: 30, left: 20, bottom: 5 }}
+          margin={{ top: 0, right: 30, left: 20, bottom: 5 }}
           barGap={8}
         >
           <CartesianGrid strokeDasharray="3 3" vertical={false} />

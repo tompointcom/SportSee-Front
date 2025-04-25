@@ -97,7 +97,7 @@ const SessionsChart: React.FC<SessionsChartProps> = ({ data }) => {
   return (
     <div className="sessions-chart-container">
       <h3 className="sessions-chart-title">Durée moyenne des sessions</h3>
-      <ResponsiveContainer width="100%" height={263}>
+      <ResponsiveContainer width="100%" height={260}>
         <LineChart
           data={data}
           margin={{ top: 50, right: 12, left: 12, bottom: 25 }}

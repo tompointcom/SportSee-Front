@@ -1,0 +1,17 @@
+{
+    "tags": {
+      "allowUnknownTags": true
+    },
+    "source": {
+      "include": ["src"],
+      "includePattern": ".(ts|tsx)$",
+      "excludePattern": "(node_modules/|dist/)"
+    },
+    "plugins": ["node_modules/jsdoc-tsimport-plugin"],
+    "opts": {
+      "destination": "docs",
+      "recurse": true,
+      "template": "default"
+    }
+  }
+  

@@ -24,11 +24,11 @@
   
 
   .sidebar {
-    position: fixed; 
-    top: 90px; 
-    left: 0;
+    position: relative;
+    top: -60px; 
+    left: -50px;
     width: 117px;
-    height: calc(100vh - 90px);
+    height: 90vh;
     background-color: #020203;
     z-index: 100;
     display: flex;
@@ -36,11 +36,17 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+    margin-bottom: -60px;
     overflow-y: auto;
+  }
+  @media (max-width: 1024px) {
+    .sidebar {
+      height: 150vh;
+    }
   }
   
   .content {
-    margin-left: 117px; 
+    margin-left: 10px; 
     padding: 30px 50px;
     flex: 1;
   }
