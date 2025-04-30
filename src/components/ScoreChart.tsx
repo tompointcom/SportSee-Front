@@ -53,7 +53,7 @@ const ScoreChart: React.FC<ScoreChartProps> = ({ score }) => {
       name: 'Score',
       value: normalizedScore,
       fill: '#FF0000'
-    }
+    }, 
   ];
 
   return (
@@ -75,7 +75,7 @@ const ScoreChart: React.FC<ScoreChartProps> = ({ score }) => {
           barSize={10} 
           data={data} 
           startAngle={210}  // L'angle de départ de l'arc
-          endAngle={-150}   // L'angle de fin de l'arc
+          endAngle={-10}   // L'angle de fin de l'arc
         >
           <PolarAngleAxis 
             type="number" 

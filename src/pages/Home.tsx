@@ -159,9 +159,7 @@ function Home({ userId: propUserId }: HomeProps) {
       setError(null);
       
       try {
-        console.log(`Fetching data for user ID: ${userId}`);
         const data = await ApiService.getUserData(userId);
-        console.log("User data received:", data);
         
         if (data) {
           // Mettre à jour userData
@@ -169,7 +167,6 @@ function Home({ userId: propUserId }: HomeProps) {
           
           // Récupérer le score
           if (data.score !== undefined) {
-            console.log("Setting score data:", data.score);
             setScoreData(data.score);
           } else {
             console.warn("No score found in data");
